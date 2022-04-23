@@ -1,6 +1,7 @@
 <template>
   <div>
     <router-link to="/" class="ecommerce link">E-commerce</router-link>
+    <router-link to="/pedidos" class="ecommerce link">Pedidos</router-link>
     <router-link to="/admin" class="link">Admin</router-link>
   </div>
 </template>

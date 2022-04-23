@@ -61,4 +61,25 @@ input {
   border: solid 1px gray;
   padding: 5px;
 }
+
+.text-center {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background: #ccc;
+}
+tr:nth-child(odd) {
+  background: #fff;
+}
+table thead tr {
+  background-color: rgb(215, 208, 208) !important;
+}
+table thead tr th {
+  padding: 15px;
+}
 </style>
