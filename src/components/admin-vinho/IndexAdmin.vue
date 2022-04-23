@@ -84,20 +84,30 @@ export default {
       });
     },
     deletarVinho(vinhoId) {
-      this.axios.delete("vinho/" + vinhoId).then(() => {
-        let indexVinho = this.findIndexVinho(vinhoId);
-        this.vinhos.splice(indexVinho, 1);
-        alert("Vinho deletado com sucesso");
-      });
+      this.axios
+        .delete("vinho/" + vinhoId)
+        .then(() => {
+          let indexVinho = this.findIndexVinho(vinhoId);
+          this.vinhos.splice(indexVinho, 1);
+          alert("Vinho deletado com sucesso");
+        })
+        .catch((error) => {
+          alert(error.response.data.mensagem);
+        });
     },
     editarVinho(vinho) {
       let vinhoId = vinho.id;
       delete vinho.id;
-      this.axios.put("vinho/" + vinhoId, vinho).then((response) => {
-        let indexVinho = this.findIndexVinho(vinhoId);
-        this.vinhos[indexVinho] = response.data;
-        alert("Vinho alterado com sucesso");
-      });
+      this.axios
+        .put("vinho/" + vinhoId, vinho)
+        .then((response) => {
+          let indexVinho = this.findIndexVinho(vinhoId);
+          this.vinhos[indexVinho] = response.data;
+          alert("Vinho alterado com sucesso");
+        })
+        .catch((error) => {
+          alert(error.response.data.mensagem);
+        });
     },
   },
   mounted() {

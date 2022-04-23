@@ -29,6 +29,7 @@ body {
   border-radius: 5px;
   background-color: white;
   padding: 15px;
+  margin-bottom: 20px;
 }
 
 hr {
