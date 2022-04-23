@@ -48,10 +48,17 @@ hr {
   justify-content: space-between;
 }
 
+.justify-content-end {
+  justify-content: flex-end;
+}
+
 .align-itens-center {
   align-items: center;
 }
 
-.btn {
+input {
+  border-radius: 5px;
+  border: solid 1px gray;
+  padding: 5px;
 }
 </style>

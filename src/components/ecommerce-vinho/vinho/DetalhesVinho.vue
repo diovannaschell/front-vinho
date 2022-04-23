@@ -2,6 +2,7 @@
   <div class="card">
     <h3>{{ vinho.nome }}</h3>
     <hr />
+    <label>Peso: {{ vinho.peso }}</label>
     <div class="d-flex justify-content-between align-itens-center">
       <label>Tipo: {{ vinho.tipo }}</label>
       <h4>R$ {{ vinho.valor }}</h4>
