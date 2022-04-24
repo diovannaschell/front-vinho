@@ -69,7 +69,7 @@ export default {
     },
     salvarVinho(vinho) {
       this.axios
-        .post("vinho", vinho)
+        .post("vinhos", vinho)
         .then((response) => {
           alert("Vinho salvo com sucesso");
           this.vinhos.push(response.data);
@@ -79,13 +79,13 @@ export default {
         });
     },
     buscarVinhos() {
-      this.axios.get("vinho").then((response) => {
+      this.axios.get("vinhos").then((response) => {
         this.vinhos = response.data;
       });
     },
     deletarVinho(vinhoId) {
       this.axios
-        .delete("vinho/" + vinhoId)
+        .delete("vinhos/" + vinhoId)
         .then(() => {
           let indexVinho = this.findIndexVinho(vinhoId);
           this.vinhos.splice(indexVinho, 1);
@@ -99,7 +99,7 @@ export default {
       let vinhoId = vinho.id;
       delete vinho.id;
       this.axios
-        .put("vinho/" + vinhoId, vinho)
+        .put("vinhos/" + vinhoId, vinho)
         .then((response) => {
           let indexVinho = this.findIndexVinho(vinhoId);
           this.vinhos[indexVinho] = response.data;

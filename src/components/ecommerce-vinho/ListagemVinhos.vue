@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     getVinhos() {
-      this.axios.get("vinho").then((response) => {
+      this.axios.get("vinhos").then((response) => {
         this.vinhos = response.data;
       });
     },
@@ -102,7 +102,7 @@ export default {
 
       this.isLoading = true;
       this.axios
-        .post("pedido", {
+        .post("pedidos", {
           distancia: this.distancia,
           itensPedido: this.itensPedido,
         })

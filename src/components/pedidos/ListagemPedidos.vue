@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     buscarPedidos() {
-      this.axios.get("pedido").then((response) => {
+      this.axios.get("pedidos").then((response) => {
         this.pedidos = response.data;
       });
     },

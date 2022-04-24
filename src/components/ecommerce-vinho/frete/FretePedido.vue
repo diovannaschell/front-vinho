@@ -55,7 +55,7 @@ export default {
 
       this.isLoading = true;
       this.axios
-        .get("pedido/calcular-frete", {
+        .get("pedidos/calcular-frete", {
           headers: { "Content-Type": "application/json" },
           params: {
             distancia: this.distancia,
