@@ -4,17 +4,18 @@ Autora: Diovanna Schell
 
 Projeto desenvolvido com VueJs na versão 3. 
 
+## Requisitos do projeto
+ - Ter o Docker
+
 ## Configuração do projeto
 
-Após clonar o projeto é necessário instalar as suas dependências, para isto você pode usar gerenciadores como o yarn ou npm. Para instalar as dependências com yarn rode o seguinte comando:
+Como foi usado docker para o desenvolvimento deste projeto, após clonar ele para rodar basta usar os comandos:
 ```
-yarn install
+docker build -t front-vinho .
+docker run front-vinho
 ```
 
-Tendo as dependências instaladas, rode a aplicação com o comando:
-```
-yarn serve
-```
+Após rodar o último comando, a url em que a aplicação está rodando será apresentada no console. Basta acessá-la no seu navegador e ver a aplicação rodando.
 
 Se o seu back-end não está rodando em localhost, será necessário alterar o host que o front-end conecta para fazer as requisições. Esta configuração fica no arquivo ```main.js``` no seguinte trecho de código:
 
